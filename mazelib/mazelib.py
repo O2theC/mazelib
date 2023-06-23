@@ -208,6 +208,8 @@ class Maze:
 
         Returns: None
         """
+
+        assert type(self.grid) is np.ndarray , "Grid must be numpy array, turn lists to numpy arrays with numpy.array()"
         assert not (self.solver is None), "No maze-solving algorithm has been set."
         assert not (self.start is None) and not (
             self.end is None
